@@ -9,6 +9,7 @@ namespace Servicios.Interfaces
     public interface IGranja
     {
         public List<GranjaResponseDTO> getAll();
+        public List<string> ObtenerErroresValidacion(GranjaCreateDTO dto);
         GranjaResponseDTO? GetById(int id);
         GranjaResponseDTO? Create(GranjaCreateDTO dto);
         bool Update(int id, GranjaCreateDTO dto);

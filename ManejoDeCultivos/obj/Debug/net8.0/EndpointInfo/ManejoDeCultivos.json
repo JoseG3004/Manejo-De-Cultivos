@@ -399,6 +399,20 @@
   },
   "components": {
     "schemas": {
+      "ContactoDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "GranjaCreateDTO": {
         "type": "object",
         "properties": {
@@ -439,6 +453,13 @@
           "clima": {
             "type": "string",
             "nullable": true
+          },
+          "contacto": {
+            "$ref": "#/components/schemas/ContactoDTO"
+          },
+          "tamanoPlantacion": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false

@@ -18,9 +18,9 @@ namespace Servicios.Servicios
                 Cultivo = granja.Cultivo,
                 Ubicacion = granja.Ubicacion,
                 Ciclos = granja.Ciclos,
-                Procesos = granja.Procesos,
+                Procesos = new List<string>(granja.Procesos ?? new List<string>()),
                 CanalVenta = granja.CanalVenta,
-                TipoCultivo = granja.TipoCultivo,
+                TipoCultivo = new List<string>(granja.TipoCultivo ?? new List<string>()),
                 Clima = granja.Clima,
                 Contacto = new ContactoDTO
                 {
@@ -30,42 +30,14 @@ namespace Servicios.Servicios
                 TamanoPlantacion = granja.TamanoPlantacion
             };
         }
-
-        private bool ValidarDTO(GranjaCreateDTO dto)
+        private bool ValidarDTO(GranjaCreateDTO dto) => !ObtenerErroresValidacion(dto).Any();
+        public List<string> ObtenerErroresValidacion(GranjaCreateDTO dto)
         {
-            if (dto == null) return false;
-
-            // Validar Tamaño de Plantación (debe ser mayor a 0)
-            if (dto.TamanoPlantacion <= 0) return false;
-
-            // Validar datos de Contacto
-            if (dto.Contacto == null || string.IsNullOrWhiteSpace(dto.Contacto.Nombre) || string.IsNullOrWhiteSpace(dto.Contacto.Telefono))
-            {
-                return false;
-            }
-
-            // Validaciones previas
-            var procesosValidos = new List<string> { "floracion", "fructificacion", "maduracion" };
-            if (dto.Procesos == null || !dto.Procesos.Any() ||
-                dto.Procesos.Any(p => !procesosValidos.Contains(ServicioTexto.NormalizarTexto(p))))
-            {
-                return false;
-            }
-
-            string canal = ServicioTexto.NormalizarTexto(dto.CanalVenta);
-            if (canal != "nacional" && canal != "internacional") return false;
-
-            var tiposValidos = new List<string> { "raices", "tuberculo", "cereal", "leguminosa", "cultivo permanente", "cultivo industrial" };
-            if (dto.TipoCultivo == null || !dto.TipoCultivo.Any() ||
-                dto.TipoCultivo.Any(t => !tiposValidos.Contains(ServicioTexto.NormalizarTexto(t))))
-            {
-                return false;
-            }
-
-            string clima = ServicioTexto.NormalizarTexto(dto.Clima);
-            if (clima != "frio" && clima != "caliente" && clima != "templado") return false;
-
-            return true;
+            var errores = new List<string>();
+            if (dto == null) { errores.Add("La información de la granja es obligatoria."); return errores; }
+            if (string.IsNullOrWhiteSpace(dto.Nombre)) errores.Add("El nombre de la granja es obligatorio.");
+            if (dto.Ciclos <= 0) errores.Add("Los ciclos deben ser mayores a 0.");
+            return errores;
         }
 
         public List<GranjaResponseDTO> getAll()

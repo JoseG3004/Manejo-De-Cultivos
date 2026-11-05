@@ -2,13 +2,14 @@
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using Servicios.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
 namespace Servicios.Servicios
 {
-    public class JwtService
+    public class JwtService : IJWT
     {
         private readonly IConfiguration _configuration;
 
