@@ -1,0 +1,296 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ManejoDeCultivos",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Granjas/GetAllGranjas": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas",
+        "description": "Busca en la base de datos y retorna la información de todas las granjas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorID": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Obtiene una granja por su ID",
+        "description": "Busca en la base de datos y retorna la información detallada de una granja.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorUbicacion": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas en un municipio",
+        "description": "Ingrese un municipio del oriente (ej. Sonsón, La Ceja, Rionegro)",
+        "parameters": [
+          {
+            "name": "Ubicacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorCultivo": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas que cultivan su query",
+        "description": "Ingrese un cultivo",
+        "parameters": [
+          {
+            "name": "cultivo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorCanalDeVenta": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas por canal de venta",
+        "description": "Ingrese Nacional / Internacional",
+        "parameters": [
+          {
+            "name": "canal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorTipoDeCultivo": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas por tipo de cultivo",
+        "description": "Ingrese: raíces, tubérculo, cereal, leguminosa, cultivo permanente, cultivo industrial",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorMenorACiclos": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas con ciclos (en meses) menores o iguales a",
+        "description": "Ingrese un número",
+        "parameters": [
+          {
+            "name": "ciclos",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorMayorACiclos": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas con ciclos (en meses) mayores o iguales a",
+        "description": "Ingrese un número",
+        "parameters": [
+          {
+            "name": "ciclos",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorProceso": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas por Procesos",
+        "description": "Ingrese: fructificación, maduración, floración",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/AnadirGranja": {
+      "post": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Añade una granja a la base de datos",
+        "description": "Ingrese la información que se le pide",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GranjaCreateDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "cultivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ciclos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "procesos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "canalVenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCultivo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "clima": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Granjas"
+    }
+  ]
+}

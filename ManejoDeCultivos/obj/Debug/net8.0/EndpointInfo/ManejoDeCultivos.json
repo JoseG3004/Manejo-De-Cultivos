@@ -1,0 +1,475 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Manejo de Cultivos",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Inicia sesión y genera un Token con Perfil",
+        "description": "Devuelve un token JWT con los permisos correspondientes según el perfil (Admin o Usuario).\nAdmin (admin & admin12) Usuario (user & user123)",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetAllGranjas": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas",
+        "description": "Busca en la base de datos y retorna la información de todas las granjas.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorID": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Obtiene una granja por su ID",
+        "description": "Ingrese el ID de una granja",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorUbicacion": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas en un municipio",
+        "description": "Ingrese un Municipio del Oriente",
+        "parameters": [
+          {
+            "name": "Ubicacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorCultivo": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas que cultivan su query",
+        "description": "Ingrese un cultivo",
+        "parameters": [
+          {
+            "name": "cultivo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorCanalDeVenta": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas las granjas por canal de venta",
+        "description": "Ingrese Nacional / Internacional",
+        "parameters": [
+          {
+            "name": "canal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorTipoDeCultivo": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve todas por tipo de cultivo",
+        "description": "Ingrese: raíces, tubérculo, cereal, leguminosa, cultivo permanente, cultivo industrial",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorMenorACiclos": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas con ciclos (en meses) menores o iguales a",
+        "description": "Ingrese un número",
+        "parameters": [
+          {
+            "name": "ciclos",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorMayorACiclos": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas con ciclos (en meses) mayores o iguales a",
+        "description": "Ingrese un número",
+        "parameters": [
+          {
+            "name": "ciclos",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetGranjaPorProceso": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Devuelve las granjas por Procesos",
+        "description": "Ingrese: fructificación, maduración, floración",
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/GetBuscarPaginado": {
+      "get": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Consulta paginada con filtros opcionales combinados",
+        "description": "Permite filtrar simultáneamente por municipio, clima y canal de venta, aplicando paginación.",
+        "parameters": [
+          {
+            "name": "municipio",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "clima",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "canal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "tamanoPagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/AnadirGranja": {
+      "post": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Añade una granja a la base de datos",
+        "description": "Ingrese la información que se le pide",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/ActualizarGranja/{id}": {
+      "put": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Actualiza una granja existente por su ID",
+        "description": "Ingrese el ID de la granja y la nueva información",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GranjaCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Granjas/EliminarGranja/{id}": {
+      "delete": {
+        "tags": [
+          "Granjas"
+        ],
+        "summary": "Elimina una granja por su ID",
+        "description": "Ingrese el ID de la granja que desea eliminar",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GranjaCreateDTO": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "cultivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ciclos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "procesos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "canalVenta": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoCultivo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "clima": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Ingrese el token JWT de esta forma: Bearer {tu_token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

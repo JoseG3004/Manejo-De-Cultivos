@@ -1,0 +1,156 @@
+[
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "AddGranja",
+    "RelativePath": "api/Granjas/AnadirGranja",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "granjaDto",
+        "Type": "Modelos.DTOs.GranjaDTO\u002BGranjaCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetAllGranjas",
+    "RelativePath": "api/Granjas/GetAllGranjas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetCanal",
+    "RelativePath": "api/Granjas/GetGranjaPorCanalDeVenta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "canal",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetCultivo",
+    "RelativePath": "api/Granjas/GetGranjaPorCultivo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cultivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetID",
+    "RelativePath": "api/Granjas/GetGranjaPorID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetCiclosMayor",
+    "RelativePath": "api/Granjas/GetGranjaPorMayorACiclos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ciclos",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetCiclosMenor",
+    "RelativePath": "api/Granjas/GetGranjaPorMenorACiclos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ciclos",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetProceso",
+    "RelativePath": "api/Granjas/GetGranjaPorProceso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetTipo",
+    "RelativePath": "api/Granjas/GetGranjaPorTipoDeCultivo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ManejoDeCultivos.Controllers.GranjasController",
+    "Method": "GetUbicacion",
+    "RelativePath": "api/Granjas/GetGranjaPorUbicacion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Ubicacion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

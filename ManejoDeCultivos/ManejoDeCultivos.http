@@ -1,0 +1,6 @@
+@ManejoDeCultivos_HostAddress = http://localhost:5021
+
+GET {{ManejoDeCultivos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
