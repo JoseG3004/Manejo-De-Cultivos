@@ -1,0 +1,13 @@
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\bin\Debug\net10.0\.msCoverageExtensionSourceRootsMapping_ManejoDeCultivos.Tests
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_ManejoDeCultivos.Tests
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_ManejoDeCultivos.Tests
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\bin\Debug\net10.0\es\MSTest.TestAdapter.resources.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\bin\Debug\net10.0\es\MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.csproj.AssemblyReference.cache
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.gentestingplatformentrypointinputcache.cache
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.genautoregisteredextensionsinputcache.cache
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.AssemblyInfoInputs.cache
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.AssemblyInfo.cs
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos.Tests\obj\Debug\net10.0\ManejoDeCultivos.Tests.sourcelink.json

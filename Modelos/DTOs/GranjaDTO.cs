@@ -1,15 +1,8 @@
 ﻿using System.Collections.Generic;
-
 namespace Modelos.DTOs
 {
     public class GranjaDTO
     {
-        public class ContactoDTO
-        {
-            public string Nombre { get; set; } = string.Empty;
-            public string Telefono { get; set; } = string.Empty;
-        }
-
         public class GranjaCreateDTO
         {
             public string Nombre { get; set; } = string.Empty;

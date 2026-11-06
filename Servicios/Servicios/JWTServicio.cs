@@ -21,7 +21,7 @@ namespace Servicios.Servicios
         public string GenerateToken(string username, string rol)
         {
             var jwtSettings = _configuration.GetSection("Jwt");
-            var keyString = jwtSettings["Key"] ?? "ClaveSuperSecretaPorFavorNoMeHackeen123";
+            var keyString = jwtSettings["Key"] ?? throw new InvalidOperationException("La clave secreta JWT no está configurada en appsettings o variables de entorno.");
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyString));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

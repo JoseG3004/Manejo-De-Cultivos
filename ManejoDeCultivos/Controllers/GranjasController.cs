@@ -281,12 +281,17 @@ namespace ManejoDeCultivos.Controllers
             Summary = "Elimina una granja por su ID",
             Description = "Ingrese el ID de la granja que desea eliminar"
         )]
-        public IActionResult DeleteGranja(int id)
+        public IActionResult EliminarGranja(int id)
         {
+            // Intentar eliminar en el servicio -> Si no existe el ID, retorna 404 Not Found
             bool eliminado = _granja.Delete(id);
-            if (!eliminado) return NotFound($"No se encontró ninguna granja con el ID {id}.");
+            if (!eliminado)
+            {
+                return NotFound(new { Mensaje = $"La granja con ID {id} no fue encontrada para eliminar." });
+            }
 
-            return NoContent(); // 204 No Content
+            // Si se eliminó con éxito -> Retorna 200 OK (o 204 No Content)
+            return Ok(new { Mensaje = "Granja eliminada con éxito" });
         }
     }
 }

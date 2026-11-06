@@ -2,6 +2,7 @@
 using Modelos;
 using Servicios.Interfaces;
 using static Modelos.DTOs.GranjaDTO;
+using Modelos.DTOs;
 using System.Collections.Generic;
 using System.Linq;
 

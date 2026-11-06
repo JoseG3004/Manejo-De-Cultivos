@@ -22,7 +22,7 @@ namespace ManejoDeCultivos.Controllers
             Summary = "Inicia sesión y genera un Token con Perfil",
             Description = "Devuelve un token JWT con los permisos correspondientes según el perfil (Admin o Usuario).\nAdmin (admin & admin12) Usuario (user & user123)"
         )]
-        public IActionResult Login([FromBody] AuthDTO.LoginDTO login)
+        public IActionResult Login([FromBody] LoginDTO login)
         {
             if (login == null || string.IsNullOrWhiteSpace(login.Usuario) || string.IsNullOrWhiteSpace(login.Password))
             {
