@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LllUa668ws8=",
+  "dgSpecHash": "VkILY+uimaU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jose Giraldo\\Desktop\\Semestre II-2026\\Estructuras\\ManejoDeCultivos\\ManejoDeCultivos\\ManejoDeCultivos.csproj",
+  "projectFilePath": "C:\\Users\\Jose Giraldo\\Desktop\\Semestre II-2026\\GitHub\\Manejo-De-Cultivos\\ManejoDeCultivos\\ManejoDeCultivos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jose Giraldo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.11\\microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
     "C:\\Users\\Jose Giraldo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -49,3 +49,6 @@ C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\Mane
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos\obj\Debug\net8.0\ManejoDeCultivos.pdb
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos\obj\Debug\net8.0\ManejoDeCultivos.genruntimeconfig.cache
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\ManejoDeCultivos\obj\Debug\net8.0\ref\ManejoDeCultivos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\ManejoDeCultivos\obj\Debug\net8.0\ManejoDeCultivos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\ManejoDeCultivos\obj\Debug\net8.0\refint\ManejoDeCultivos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\ManejoDeCultivos\obj\Debug\net8.0\ManejoDeCultivos.pdb

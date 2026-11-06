@@ -14,3 +14,6 @@ C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\Base
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\BaseDatos\obj\Debug\net8.0\refint\BaseDatos.dll
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\BaseDatos\obj\Debug\net8.0\BaseDatos.pdb
 C:\Users\Jose Giraldo\Desktop\Semestre II-2026\Estructuras\ManejoDeCultivos\BaseDatos\obj\Debug\net8.0\ref\BaseDatos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\BaseDatos\obj\Debug\net8.0\BaseDatos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\BaseDatos\obj\Debug\net8.0\refint\BaseDatos.dll
+C:\Users\Jose Giraldo\Desktop\Semestre II-2026\GitHub\Manejo-De-Cultivos\BaseDatos\obj\Debug\net8.0\BaseDatos.pdb
